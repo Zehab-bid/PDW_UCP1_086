@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia - Tech Community</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">◆ TECH COM</div>
+    <div>
+      <a href="./index.html">Home</a>
+      <a href="./form.html">Daftar</a>
+      <a href="./gallery.html" class="active">Media</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="section-title">Galeri Multimedia</h1>
+
+    <!-- IMAGE GALLERY -->
+    <div class="media-card">
+      <h2 class="media-title">📷 Galeri Foto</h2>
+      <img id="galleryImg" src="" alt="Galeri Foto">
+      <div class="img-counter">
+        <span id="imgNum">1</span> / <span id="imgTotal">4</span>
+      </div>
+      <button class="btn" onclick="prevImg()">← Sebelumnya</button>
+      <button class="btn" onclick="nextImg()">Berikutnya →</button>
+      <button class="btn btn-info" onclick="infoImg()">ℹ Info</button>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="media-card">
+      <h2 class="media-title">▶ Video YouTube</h2>
+      <div class="video-container">
+        <iframe id="player"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <button class="btn" onclick="changeVideo('ZV8T7O56P3I')">Video 1</button>
+      <button class="btn" onclick="changeVideo('ImIjMal6l7E')">Video 2</button>
+      <button class="btn btn-info" onclick="infoVideo()">ℹ Info</button>
+    </div>
+
+    <!-- AUDIO -->
+    <div class="media-card">
+      <h2 class="media-title">🎵 Pemutar Audio</h2>
+      <div class="audio-box">
+        <div class="audio-info">
+          <strong id="audioTitle">Tech Vibes Mix</strong><br>
+          Duration: <span id="duration">--:--</span>
+        </div>
+        <audio id="audioPlayer" controls onloadedmetadata="updateDuration()">
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+        <button class="btn" onclick="playAudio()">▶ Play</button>
+        <button class="btn" onclick="pauseAudio()">⏸ Pause</button>
+        <button class="btn" onclick="stopAudio()">■ Stop</button>
+        <button class="btn btn-info" onclick="infoAudio()">ℹ Info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Tech Community | Coded with ◆</p>
+  </div>
+
+  <script src="./script-gallery.js"></script>
+</body>
+</html>
